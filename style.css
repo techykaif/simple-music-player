@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Style Script', cursive;
+    background-image: url(background.jpg);
+    background-position: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.music-player{
+    display: flex;
+    height: 650px;
+    width: 800px;
+    margin-left: 22%;
+    margin-top: 5%;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 6%;
+    
+}
+.title{
+    text-align : center;
+    background: linear-gradient(45deg,red,yellow,violet,green,blue);
+    background-clip: text;
+    color: transparent;
+    font-size: 50px;
+    transition: animation ease 2s;
+    animation: starting ease-in-out 5s;
+    margin-top: -3px;
+}
+@keyframes starting {
+    0%{
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateY(30px);
+        scale: 1.1;
+    }
+    100%{
+        transform: translate(0px);
+        scale: 1;
+    }
+    
+}
+.rotation{
+    display: flex;
+    background-color: black;
+    height: 350px;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 28%;
+    border-radius: 50%;
+    margin-top: -10%;
+}
+.rotation>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 1px solid white;
+    outline: 1px solid red;
+    outline-offset: 4px;
+    transition: animation ease-in-out 1s;
+   
+}
+.rotation>img:hover{
+    animation: rotating infinite 15s ease-in-out;
+    cursor: pointer;
+}
+@keyframes rotating {
+    0%{
+        rotate: 0deg;
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.audio-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.audio-details>audio{
+    width: 80%;
+    margin: 0px 20%;
+}
